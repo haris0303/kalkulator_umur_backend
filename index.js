@@ -6,6 +6,10 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+app.get("/", (req, res) => {
+  res.send("Backend hidup 🚀");
+});
+
 app.post("/hitung-umur", (req, res) => {
     const { birthday } = req.body;
 
